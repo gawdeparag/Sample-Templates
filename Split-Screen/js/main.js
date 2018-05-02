@@ -17,3 +17,11 @@ document.addEventListener('DOMContentLoaded', function(){
       topLayer.style.width= e.clientX + skew + delta + 'px';
     });
   });
+
+document.querySelector('body .skewed').style.display = 'none';
+document.querySelector('body').classList.add('spinner');
+
+setTimeout(() => {
+  document.querySelector('body').classList.remove('spinner');
+  document.querySelector('body .skewed').style.display = 'block';
+}, 5000);
